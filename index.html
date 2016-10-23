@@ -9,6 +9,9 @@
     <meta name="description" content="Crystals Collector">
     <meta name="author" content="Ali Zaidi">
 
+	<!-- add link to the jQuery Library -->
+  	<script src="assets/javascript/jquery-3.1.1.min.js"></script>
+	
 	<!-- set up style sheets -->
 	<!-- reset not needed because using bootstrap -->
 	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/reset.css"> -->
@@ -37,12 +40,11 @@
 		<!-- random number div and wins/losses div -->
 		<div class="row">
 			<div class="col-md-3 col-md-offset-1" style="background-color: lightgreen">
-				<p>random number</p>
-				<p>&nbsp;</p>
+				<h2 id="randomNumber">random#</h2>
 			</div>
 			<div class="col-md-3 col-md-offset-1" style="background-color: lightblue">
-				<p>wins: </p>
-				<p>losses: </p>
+				<p id="winsTally">Wins: </p>
+				<p id="lossesTally">losses: </p>
 			</div>
 		</div>
 
@@ -62,17 +64,17 @@
 			</div>
 		</div>
 		
-		<!-- your score row -->
+		<!-- score text row -->
 		<div class="row">
 			<div class="col-md-3 col-md-offset-1" style="background-color: yellow">
 				<p>Your total score is:</p>
 			</div>
 		</div>
 
-		<!-- score div -->
+		<!-- user score div -->
 		<div class="row">
 			<div class="col-md-3 col-md-offset-1" style="background-color: pink">
-				<p>score</p>
+				<h2 id="userScore">score</h2>
 			</div>
 		</div>
 	
