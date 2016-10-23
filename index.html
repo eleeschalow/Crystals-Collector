@@ -21,6 +21,64 @@
 
 <body>
 
+	<div class="container">
+
+		<div class="jumbotron">
+			<!-- header at the top -->
+			<h1>Crystals Collector!</h1>
+			<!-- then come instructions -->
+			<h4><small>You will be given a random number at the start of the game.</small></h4>
+			<h4><small>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</small></h4>
+			<h4><small>You win the game by matching your total score to random number. You lose the game if your total score goes above the random number.</small></h4>
+			<h4><small>The value of each crystal is hidden from you until you click on it.</small></h4>
+			<h4><small>Each time when the game starts, the game will change the values of each crystal.</small></h4>
+		</div>
+
+		<!-- random number div and wins/losses div -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1" style="background-color: lightgreen">
+				<p>random number</p>
+				<p>&nbsp;</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1" style="background-color: lightblue">
+				<p>wins: </p>
+				<p>losses: </p>
+			</div>
+		</div>
+
+		<!-- gems -->
+		<div class="row">
+			<div class="col-md-1 col-md-offset-1" id="gem1">
+				<img src="assets/images/gem1.png" class="img-responsive" alt="Gem1">
+			</div>
+			<div class="col-md-1 col-md-offset-1" id="gem2">
+				<img src="assets/images/gem2.png" class="img-responsive" alt="Gem2">
+			</div>
+			<div class="col-md-1 col-md-offset-1" id="gem3">
+				<img src="assets/images/gem3.png" class="img-responsive" alt="Gem3">
+			</div>
+			<div class="col-md-1 col-md-offset-1" id="gem4">
+				<img src="assets/images/gem4.png" class="img-responsive" alt="Gem4">
+			</div>
+		</div>
+		
+		<!-- your score row -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1" style="background-color: yellow">
+				<p>Your total score is:</p>
+			</div>
+		</div>
+
+		<!-- score div -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1" style="background-color: pink">
+				<p>score</p>
+			</div>
+		</div>
+	
+	<!-- now end the container	 -->
+	</div>
+
 	<!-- Link to game javascript  -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
