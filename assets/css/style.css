@@ -1,3 +1,7 @@
+body {
+	background: url("../images/dark_embroidery.png");
+}
+
 .row {
 	margin-bottom: 10px;
 }

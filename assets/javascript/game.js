@@ -8,7 +8,9 @@ $(document).ready(function() {
 	var gemOneValue, gemTwoValue, gemThreeValue, gemFourValue;
 	var wins = 0;
 	var losses = 0;
+	// randomComputerNumber is the random digit computer will generage
 	var randomComputerNumber;
+	// userTallyScore is the ongoing sum of gem values user has picked
 	var userTallyScore;
 
 	// ================
@@ -17,11 +19,14 @@ $(document).ready(function() {
 
 	// function that initializes the variables for each now round of the game
 	function initializeVariables() {
+		// have computer pick a number between 19-120
 		randomComputerNumber = 19 + Math.floor(Math.random() * 102);
+		// pick random gem values between 1-12
 		gemOneValue = 1 + Math.floor(Math.random() * 12);
 		gemTwoValue = 1 + Math.floor(Math.random() * 12);
 		gemThreeValue = 1 + Math.floor(Math.random() * 12);
 		gemFourValue = 1 + Math.floor(Math.random() * 12);
+		// set initial value of user's ongoing gem selections sum to 0
 		userTallyScore = 0;
 		// update the html for the game board
 		$("#winsTally").html("Wins: " + wins);
@@ -66,9 +71,13 @@ $(document).ready(function() {
 
 	initializeVariables();
 
+	// listen for clicks on any of the gems by targeting the gem class
 	$(".gem").on("click", function() {
+		// each gem has a value attribute of gem1, gem2, gem3, or gem 4
+		// use this attribute to identify which gem the user actually clicked
 		var pressed = $(this).attr("value");
         console.log(pressed);
+        // add the value of the gem to the user's ongoing score tally
         if (pressed == "gem1") {
         	userTallyScore += gemOneValue;
         } else if (pressed == "gem2") {
@@ -80,10 +89,11 @@ $(document).ready(function() {
         } else {
         	console.log("error");
         }
+        // then update the html for the user score
         $("#userScore").html(userTallyScore);
         consoleLogVariables();
+        // call the function to see if user has won or lost
         hasUserWonOrLost();
-
 	});
 
 });
