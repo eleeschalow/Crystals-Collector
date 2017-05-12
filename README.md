@@ -2,6 +2,9 @@
 
 A JavaScript and jQuery based game in which you collect gems to get to a target score.
 
+Live site may be seen at https://realzaidiguy.github.io/Crystals-Collector/
+
+
 ***
 
 Please click below to watch video runthrough:
